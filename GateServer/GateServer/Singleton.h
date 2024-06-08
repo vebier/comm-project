@@ -1,7 +1,6 @@
 #pragma once
-#include<memory>
+#include"const.h"
 #include<mutex>
-#include<iostream>
 template<typename T>
 class Singleton {
 public:
