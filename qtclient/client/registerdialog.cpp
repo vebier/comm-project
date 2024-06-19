@@ -1,5 +1,6 @@
 #include "registerdialog.h"
 #include "ui_registerdialog.h"
+#include"global.h"
 #include"httpmgr.h"
 RegisterDialog::RegisterDialog(QWidget *parent)
     : QDialog(parent)
@@ -11,7 +12,7 @@ RegisterDialog::RegisterDialog(QWidget *parent)
 
     ui->err_tip->setProperty("state","normal");
     repolish(ui->err_tip);
-
+     initHttpHandlers();
     connect(HttpMgr::GetInstance().get(), &HttpMgr::sig_reg_mod_finish, this, &RegisterDialog::slot_reg_mod_finish);
 }
 
@@ -31,6 +32,10 @@ void RegisterDialog::on_get_code_clicked()
     bool match = regex.match(email).hasMatch(); // 执行正则表达式匹配
     if(match){
         //发送http请求获取验证码
+        QJsonObject json_obj;
+        json_obj["email"]=email;
+        HttpMgr::GetInstance()->PostHttpReq(QUrl(gate_url_prefix+"/get_varifycode"),json_obj,ReqId::ID_GET_VARIFY_CODE,
+                                            Modules::REGISTERMOD);
     }else{
         //提示邮箱不正确
         showTip(tr("邮箱地址不正确"),false);
@@ -56,9 +61,6 @@ void RegisterDialog::slot_reg_mod_finish(ReqId id, QString res, ErrorCodes err)
         return;
     }
     QJsonObject jsonObj = jsonDoc.object();
-    //调用对应的逻辑
-    return;
-
     _handlers[id](jsonDoc.object());
     return;
 }
@@ -66,12 +68,11 @@ void RegisterDialog::slot_reg_mod_finish(ReqId id, QString res, ErrorCodes err)
 void RegisterDialog::showTip(QString str,bool b_ok)
 {
     if(b_ok){
-        ui->err_tip->setProperty("status","normal");
+       ui->err_tip->setProperty("state","normal");
     }else{
-        ui->err_tip->setProperty("status","err");
+         ui->err_tip->setProperty("state","err");
     }
     ui->err_tip->setText(str);
-    ui->err_tip->setProperty("state","err");
     repolish(ui->err_tip);
 }
 

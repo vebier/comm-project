@@ -7,9 +7,7 @@
 #include <QObject>
 #include <QNetworkAccessManager>
 #include "global.h"
-#include <memory>
-#include <QJsonObject>
-#include <QJsonDocument>
+
 class HttpMgr:public QObject, public Singleton<HttpMgr>,
                 public std::enable_shared_from_this<HttpMgr>
 {

@@ -6,6 +6,13 @@
 #include "QStyle"
 #include<QRegularExpression>
 #include<QNetworkReply>
+#include <memory>
+#include<iostream>
+#include<mutex>
+#include <QJsonObject>
+#include <QJsonDocument>
+#include<QDir>
+#include<QSettings>
 
 /**
  * @brief repolish 用来刷新qss
@@ -26,5 +33,7 @@ enum ErrorCodes{
 enum Modules{
     REGISTERMOD = 0,
 };
+
+extern QString gate_url_prefix;
 
 #endif // GLOBAL_H
