@@ -1,7 +1,8 @@
 #include "HttpConnection.h"
 #include"LogicSystem.h"
-HttpConnection::HttpConnection(tcp::socket socket):_socket(std::move(socket))
+HttpConnection::HttpConnection(boost::asio::io_context& ioc):_socket(ioc)
 {
+
 }
 
 void HttpConnection::start()
@@ -27,6 +28,11 @@ void HttpConnection::start()
 				return;
 			}
 		});
+}
+
+tcp::socket& HttpConnection::GetSokcet()
+{
+	return _socket;
 }
 
 void HttpConnection::CheckDeadline()

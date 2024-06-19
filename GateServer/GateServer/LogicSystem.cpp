@@ -1,5 +1,6 @@
 #include "LogicSystem.h"
 #include"HttpConnection.h"
+#include"VerifyGrpcClient.h"
 LogicSystem::LogicSystem()
 {
 	//这里调用RegGet然后把lambd表达式作为实参传过去
@@ -43,8 +44,9 @@ LogicSystem::LogicSystem()
 		}
 
 		auto email = src_root["email"].asString();//以字符串的方式转换
+		GetVarifyRsp Rsp=VerifyGrpcClient::GetInstance()->GetVarifyCode(email);
 		std::cout << "email is " << email << std::endl;
-		root["error"] = 0;
+		root["error"] = Rsp.error();
 		root["email"] = src_root["email"];
 		std::string jsonstr = root.toStyledString();//以Json格式方式转换，打印出来可能是{"email"=XXX,"error"=0,}
 		beast::ostream(connection->_response.body()) << jsonstr;
