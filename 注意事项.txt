@@ -1,0 +1,2 @@
+下载之后记得修改引入依赖的路径（暂时引入了jsoncpp,proto,grpc,boost)，不要在项目属性里修改，在视图->其他窗口->属性管理器->Debug|x64->propertySheet里修改，
+所有的.h文件都在const里，不要单独引用某个头文件，放在const里即可。
