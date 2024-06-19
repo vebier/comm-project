@@ -1,2 +1,9 @@
-下载之后记得修改引入依赖的路径（暂时引入了jsoncpp,proto,grpc,boost)，不要在项目属性里修改，在视图->其他窗口->属性管理器->Debug|x64->propertySheet里修改，
+下载之后记得修改引入依赖的路径（暂时引入了jsoncpp,proto,grpc,boost)，不要在项目属性里修改，
+在视图->其他窗口->属性管理器->Debug|x64->propertySheet里修改。
+
 所有的.h文件都在const里，不要单独引用某个头文件，放在const里即可。
+
+验证服务安装了ioredis、@grpc/proto-loader、nodemailer。
+
+验证邮箱模块里的发邮箱账户以及smtp都是我自己的，如果你要用记得修改。
+暂时就想到这么多，如果还有问题可以在此存储库里留言。
