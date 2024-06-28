@@ -3,7 +3,7 @@
 
 //避免两个类都包含const重复引用
 class HttpConnection;
-//Http get回调函数
+//Http get以及post回调函数
 typedef std::function<void(std::shared_ptr<HttpConnection>)> HttpHandle;
 class LogicSystem:public Singleton<LogicSystem>
 {

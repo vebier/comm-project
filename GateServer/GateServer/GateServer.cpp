@@ -108,7 +108,7 @@ void TestRedisMgr() {
 int main()
 {
     //TestRedis();
-    TestRedisMgr();
+    //TestRedisMgr();
     static ConfigMgr gCfgMgr=ConfigMgr::GetIns();
     std::string gate_port_str=gCfgMgr["GateServer"]["port"];
     unsigned short port = atoi(gate_port_str.c_str());

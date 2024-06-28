@@ -1,5 +1,9 @@
 #include "ConfigMgr.h"
-
+#include"const.h"
+#include<fstream>
+#include<boost/property_tree/ptree.hpp>
+#include<boost/property_tree/ini_parser.hpp>
+#include<map>
 ConfigMgr::ConfigMgr()
 {
 	boost::filesystem::path current_path = boost::filesystem::current_path();

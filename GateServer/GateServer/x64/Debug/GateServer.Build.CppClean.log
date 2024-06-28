@@ -1,7 +1,10 @@
 e:\vs\boost\gateserver\gateserver\x64\debug\vc142.pdb
 e:\vs\boost\gateserver\gateserver\x64\debug\vc142.idb
 e:\vs\boost\gateserver\gateserver\x64\debug\verifygrpcclient.obj
+e:\vs\boost\gateserver\gateserver\x64\debug\sqlpool.obj
+e:\vs\boost\gateserver\gateserver\x64\debug\redismgr.obj
 e:\vs\boost\gateserver\gateserver\x64\debug\redisconpool.obj
+e:\vs\boost\gateserver\gateserver\x64\debug\mysqlpool.obj
 e:\vs\boost\gateserver\gateserver\x64\debug\message.pb.obj
 e:\vs\boost\gateserver\gateserver\x64\debug\message.grpc.pb.obj
 e:\vs\boost\gateserver\gateserver\x64\debug\logicsystem.obj
@@ -10,6 +13,12 @@ e:\vs\boost\gateserver\gateserver\x64\debug\gateserver.obj
 e:\vs\boost\gateserver\gateserver\x64\debug\cserver.obj
 e:\vs\boost\gateserver\gateserver\x64\debug\configmgr.obj
 e:\vs\boost\gateserver\gateserver\x64\debug\asioioservicepool.obj
+e:\vs\boost\gateserver\gateserver\x64\debug\gateserver.ilk
+e:\vs\boost\gateserver\x64\debug\gateserver.exe
+e:\vs\boost\gateserver\x64\debug\gateserver.pdb
 e:\vs\boost\gateserver\gateserver\x64\debug\gateserver.tlog\cl.command.1.tlog
 e:\vs\boost\gateserver\gateserver\x64\debug\gateserver.tlog\cl.read.1.tlog
 e:\vs\boost\gateserver\gateserver\x64\debug\gateserver.tlog\cl.write.1.tlog
+e:\vs\boost\gateserver\gateserver\x64\debug\gateserver.tlog\link.command.1.tlog
+e:\vs\boost\gateserver\gateserver\x64\debug\gateserver.tlog\link.read.1.tlog
+e:\vs\boost\gateserver\gateserver\x64\debug\gateserver.tlog\link.write.1.tlog
