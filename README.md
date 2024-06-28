@@ -1,2 +1,2 @@
 # comm-project
-Qt客户端以及Boost服务器
+Qt客户端以及分布式服务器
